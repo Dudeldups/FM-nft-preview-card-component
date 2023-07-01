@@ -47,6 +47,7 @@ a {
 
 .item {
   &-name {
+    display: inline-block;
     margin-top: 1.5rem;
     font-size: 1.4rem;
     font-weight: 600;
