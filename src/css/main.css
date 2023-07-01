@@ -100,7 +100,7 @@ a {
   opacity: 0;
   transition: opacity 0.3s ease-in;
 }
-.img-wrapper:hover::after {
+.img-wrapper:hover::after, .img-wrapper:focus::after {
   opacity: 1;
 }
 
@@ -110,7 +110,7 @@ a {
   font-weight: 600;
   color: hsl(0, 0%, 100%);
 }
-.item-name:hover {
+.item-name:hover, .item-name:focus {
   color: hsl(178, 100%, 50%);
 }
 .item-description {
@@ -160,6 +160,6 @@ a {
 .artist__name {
   color: hsl(0, 0%, 100%);
 }
-.artist__name:hover {
+.artist__name:hover, .artist__name:focus {
   color: hsl(178, 100%, 50%);
 }/*# sourceMappingURL=main.css.map */
