@@ -39,7 +39,8 @@ a {
     transition: opacity 0.3s ease-in;
   }
 
-  &:hover::after {
+  &:hover::after,
+  &:focus::after {
     opacity: 1;
   }
 }
@@ -51,7 +52,8 @@ a {
     font-weight: 600;
     color: colors.$white;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: colors.$primary-cyan;
     }
   }
@@ -106,7 +108,8 @@ a {
   &__name {
     color: colors.$white;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: colors.$primary-cyan;
     }
   }
