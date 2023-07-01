@@ -1,0 +1,113 @@
+@use "resets";
+@use "colors";
+
+body {
+  display: grid;
+  place-content: center;
+  padding: 1.2rem;
+  background: colors.$main-bg-blue;
+  font: 1.125rem "Outfit", sans-serif;
+  font-weight: 300;
+  color: colors.$primary-blue;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card {
+  padding: 1.4rem;
+  max-width: 21.875rem;
+  background: colors.$card-bg-blue;
+  border-radius: 14px;
+  box-shadow: 0 1rem 1rem 1rem rgba(black, 0.1);
+}
+
+.img-wrapper {
+  display: inline-block;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(colors.$primary-cyan, 0.5) url("../assets/icon-view.svg")
+      center no-repeat;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+.item {
+  &-name {
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: colors.$white;
+
+    &:hover {
+      color: colors.$primary-cyan;
+    }
+  }
+
+  &-description {
+    margin-top: 1.2rem;
+    font-size: clamp(0.9rem, -0.12rem + 5.14vw, 1.125rem);
+  }
+}
+
+.price-wrapper {
+  display: flex;
+  align-items: center;
+  padding-block: 1.2rem;
+  font-size: 1rem;
+
+  & > img {
+    height: 100%;
+  }
+}
+
+.price {
+  margin-left: 0.4em;
+  margin-right: auto;
+  font-weight: 600;
+  color: colors.$primary-cyan;
+}
+
+.time {
+  margin-left: 0.4em;
+}
+
+.line {
+  border: none;
+  height: 1px;
+  background-color: colors.$line-blue;
+}
+
+.artist {
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9em;
+  font-size: 1rem;
+
+  &__img {
+    width: 2em;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+
+  &__name {
+    color: colors.$white;
+
+    &:hover {
+      color: colors.$primary-cyan;
+    }
+  }
+}
